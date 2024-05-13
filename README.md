@@ -1,12 +1,16 @@
 # Thinkpad Fan Control GUI
 
-![Screenshot](https://i.imgur.com/UXII1Mg.png)
+![Screenshot](https://imgur.com/a/J9U3Lc9)
 
-This is an application for controlling fan speed on IBM/Lenovo ThinkPads.
+This is an application for controlling fan speed on IBM/Lenovo ThinkPads on Linux. Based on the script by Dev Aggarwal.
 
-It can also monitor CPU temp and fan RPM.
+It can also monitor CPU temp and fan RPM. 
 
-It is written for Linux only. For windows, see http://www.almico.com/speedfan.php   
+## Supported Devices
+Tested on
+```
+ThinkPad x280 (working)
+```
 
 ## How it Works?
  + Parses `sensors` command to show CPU temp and fan RPM
