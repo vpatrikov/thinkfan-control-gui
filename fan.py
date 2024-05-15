@@ -3,12 +3,15 @@ import tkinter as tk
 import subprocess
 from time import sleep
 from threading import Thread
+import os
 
+current_speed = "auto"
 
 def get_info():
+    global current_speed
     try:
         info_lines = subprocess.check_output("sensors", text=True).split("\n")
-        result = []
+        result = [f"Set Fan Speed: {current_speed}"]
         count = 1
         for line in info_lines:
             if "Core" in line:
@@ -20,16 +23,15 @@ def get_info():
         result = ["Error fetching sensor data"]
     return result
 
-
 def set_speed(speed=None):
+    global current_speed
     try:
-        subprocess.run(
-            f'echo level {speed} | sudo tee "/proc/acpi/ibm/fan"', shell=True, check=True, text=True
-        )
+        command = f'pkexec sh -c "echo level {speed} > /proc/acpi/ibm/fan"'
+        os.system(command)
+        current_speed = speed
         print(f"Fan speed set to {speed}")
-    except subprocess.CalledProcessError:
-        print(f"Failed to set fan speed to {speed}")
-
+    except Exception as e:
+        print(f"Failed to set fan speed to {speed}: {e}")
 
 class MainApplication(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
@@ -74,10 +76,9 @@ class MainApplication(tk.Frame):
                     self.status_panel["text"] = new_text
         Thread(target=display_loop, daemon=True).start()
 
-
 if __name__ == "__main__":
     root = tk.Tk()
-    root.resizable(0,0)
+    root.resizable(0, 0)
     app = MainApplication(root)
     app.pack(expand=True, fill=tk.BOTH)
     root.mainloop()
