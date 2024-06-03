@@ -10,6 +10,7 @@ It can also monitor CPU temp and fan RPM.
 Tested on
 ```
 ThinkPad x280 (working)
+ThinkPad T480s (working)
 ```
 
 ## How it Works?
