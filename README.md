@@ -1,6 +1,6 @@
 # Thinkpad Fan Control GUI
 
-![Screenshot](https://i.imgur.com/Cjp1GhR.png)
+![Screenshot](https://i.imgur.com/B6SIv1m.png)
 
 This is an application for controlling fan speed on IBM/Lenovo ThinkPads on Linux. Based on the script by Dev Aggarwal.
 
