@@ -56,7 +56,7 @@ window = Tk()
 if system() != "Linux":
     messagebox.showerror(
         title="Program made for Linux!", 
-        message="This program will not work correctly on your OS."
+        message="This program will not work on your OS."
     )
     window.destroy()
     exit(1)
@@ -96,7 +96,7 @@ entry_1.place(
     x=616.0,
     y=91.0,  # Adjusted y position for new layout
     width=294.0,
-    height=598.0
+    height=375.0
 )
 entry_1.tag_configure("center", justify="center")
 entry_1.config(state='disabled')  # Disable editing by default
@@ -243,7 +243,7 @@ button_8.place(
     x=173.0,
     y=512.0,
     width=120.0,
-    height=93.0526351928711
+    height=92.1
 )
 
 button_image_9 = PhotoImage(
