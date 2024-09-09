@@ -168,7 +168,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: set_speed(4),
+    command=lambda: set_speed(6),
     relief="flat"
 )
 button_4.place(
@@ -202,7 +202,7 @@ button_6 = Button(
     image=button_image_6,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: set_speed(6),
+    command=lambda: set_speed(4),
     relief="flat"
 )
 button_6.place(
