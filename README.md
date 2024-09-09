@@ -1,6 +1,6 @@
 # Thinkpad Fan Control GUI
 
-![Screenshot](https://i.imgur.com/B6SIv1m.png)
+![Screenshot](https://i.imgur.com/OefITyn.png)
 
 This is an application for controlling fan speed on IBM/Lenovo ThinkPads on Linux. Based on the script by Dev Aggarwal.
 
@@ -24,9 +24,8 @@ ThinkPad T480s (working)
 + Open this file, using command -- `sudo nano /etc/modprobe.d/thinkpad_acpi.conf` 
 + Add line `options thinkpad_acpi fan_control=1`
 + Reboot. 
-+ `python3 fan.py`
++ `python3 gui.py`
 
-( Add `sudo` to modify speed )
 
 ---
 
