@@ -257,13 +257,30 @@ button_9 = Button(
     relief="flat"
 )
 button_9.place(
-    x=151.0,
+    x=56.2,
     y=385.0,
     width=163.0,
     height=102.0
 )
 
+button_image_10 = PhotoImage(
+    file=relative_to_assets("button_10.png")
+)
+button_10 = Button(
+    image=button_image_10,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: set_speed(0),
+    relief="flat"
+)
+
+button_10.place(
+    x=243.5,
+    y=385.0,
+    width=163.0,
+    height=102.0
+)
 start_display_loop()
-window.title("Thinkfan Control")
+window.title("ThinkFan Control")
 window.resizable(False, False)
 window.mainloop()
